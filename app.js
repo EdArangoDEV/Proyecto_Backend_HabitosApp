@@ -13,7 +13,7 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 app.use(cors({
-  origin: 'https://habitos-tracker-backend.vercel.app', // Especifica el origen exacto
+  origin: 'https://habitos-tracker-frontend.vercel.app', // Especifica el origen exacto
   credentials: true // Permite credenciales
 }));
 
