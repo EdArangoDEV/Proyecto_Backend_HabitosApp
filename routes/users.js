@@ -50,9 +50,9 @@ router.post("/login", async (req, res, next) => {
       expiresIn: "1d",
     });
     res.cookie("habitoToken", token, {
-      httpOnly: false, // previene el acceso desde el frontend
+      httpOnly: true, // previene el acceso desde el frontend
       secure: process.env.NODE_ENV === "production", // solo se envia en produccion
-      sameSite: "Strict", // solo se envia en peticiones del mismo sitio
+      sameSite: "None", // solo se envia en peticiones del mismo sitio
       maxAge: 7 * 24 * 60 * 60 * 1000, // tiempo de vida de la cookie
     });
     res.json({ 
