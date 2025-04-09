@@ -29,3 +29,4 @@ docker-compose.override.yml
 
 # Archivos de pruebas
 test/coverage/
+.vercel
